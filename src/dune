@@ -1,0 +1,11 @@
+; Lexer is defined inside lexer.mll
+(ocamllex lexer)
+
+; Parser is defined inside parser.mly
+(menhir
+ (modules parser))
+
+(executable
+ (public_name math_interpreter)
+ (name main)
+)
